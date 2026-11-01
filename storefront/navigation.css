@@ -1,0 +1,22 @@
+/* A centered brand masthead and direct category navigation at every width. */
+.site-header{display:block;height:auto;padding:0;gap:0;background:#fffdfb}
+.header-top{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);align-items:center;gap:24px;padding:20px 5%;min-height:91px}
+.header-top .header-leading{justify-self:start}
+.header-top>.logo{justify-self:center;align-items:center;margin:0;min-width:0}
+.header-top>.header-actions{justify-self:end;justify-content:flex-end;min-width:0;gap:13px}
+.site-header .header-top .account-button{display:inline-flex}
+.site-header .header-top .logo-sub{font-size:6px;letter-spacing:3px;text-align:center}
+.site-header .header-top .brand-wordmark{width:166px;height:32px}
+.header-navigation{display:flex;align-items:center;gap:24px;min-width:0;padding:0 5%;border-top:1px solid #f0e7eb}
+.site-header .header-navigation .desktop-nav{display:flex;flex:1;align-items:center;justify-content:center;gap:26px;min-width:0;margin:0;min-height:55px;overflow-x:auto;overscroll-behavior-x:contain;scrollbar-width:thin;scrollbar-color:#dfb9c9 transparent}
+.site-header .header-navigation .desktop-nav a{flex:0 0 auto;font-size:12px;white-space:nowrap;padding:18px 0;line-height:1.5}
+.site-header .header-navigation .desktop-nav a.active:after{bottom:8px}
+.site-header .header-navigation .nav-case-link{font-weight:700;color:#ac326b}
+.site-header .header-navigation .language-control{flex-shrink:0;margin:0}
+.site-header .header-navigation .language-control select{width:123px;max-width:none;min-height:35px;font-size:10px;padding:7px 10px}
+.menu-main-categories{margin-top:0}
+.menu-main-categories>.menu-product-row{border-bottom:1px solid #f1e9ec;padding:11px 0}
+.menu-main-categories>.menu-product-row img{width:48px;height:48px}
+@media(max-width:1200px){.header-navigation{gap:18px}.site-header .header-navigation .desktop-nav{justify-content:flex-start;gap:21px}.site-header .header-navigation .desktop-nav a{font-size:11px}.site-header .header-navigation .language-control select{width:112px}}
+@media(max-width:760px){.header-top{padding:13px 5%;gap:12px;min-height:74px}.site-header .header-top .brand-wordmark{width:126px;height:25px}.site-header .header-top .logo-sub{font-size:4.5px;letter-spacing:2.1px}.header-top>.header-actions{gap:5px}.header-top .header-cart{min-width:32px;padding:7px}.header-top .header-cart span{display:none}.header-top .header-cart svg{width:20px;height:20px}.site-header .header-top .account-button{min-width:33px;min-height:35px;padding:7px}.header-navigation{padding:0 5%;gap:13px}.site-header .header-navigation .desktop-nav{gap:20px;min-height:49px}.site-header .header-navigation .desktop-nav a{font-size:11px;padding:14px 0}.site-header .header-navigation .language-control select{width:103px;font-size:10px;min-height:34px;padding:6px 7px}.menu-main-categories>.menu-product-row img{width:44px;height:44px}}
+@media(max-width:370px){.site-header .header-top .brand-wordmark{width:118px;height:23px}.header-top>.header-actions{gap:3px}.site-header .header-navigation .language-control select{width:98px}.header-navigation{gap:11px}}

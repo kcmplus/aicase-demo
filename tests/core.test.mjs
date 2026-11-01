@@ -1,0 +1,9 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {availability,initialState,login,scanDevice,createOrder,advanceOrder} from '../storefront/core.js';
+test('scan uses saved account model and preserves device identity',()=>{let s=initialState();login(s,'demo@example.com','iPhone 16 Pro');s.model='iPhone 15';scanDevice(s,'SH-001');assert.equal(s.model,'iPhone 16 Pro');assert.equal(s.deviceId,'SH-001');});
+test('first scan does not invent a model',()=>{let s=initialState();scanDevice(s,'SH-001');assert.equal(s.model,'');});
+test('rejects unsupported, empty stock, offline and unknown devices separately',()=>{assert.equal(availability('SH-001','Samsung S24').code,'unsupported');assert.equal(availability('SH-001','iPhone 15').code,'stock');assert.equal(availability('SH-003','iPhone 16 Pro').code,'offline');assert.equal(availability('unknown','iPhone 16 Pro').code,'unknown');assert.equal(availability('SH-001','iPhone 16 Pro').ok,true);});
+test('pickup order rejects unavailable model at payment',()=>{let s=initialState();s.model='iPhone 15';s.delivery='pickup';s.deviceId='SH-001';assert.throws(()=>createOrder(s),/库存/);assert.equal(s.orders.length,0);});
+test('mail validates address and stores immutable design snapshot',()=>{let s=initialState();s.model='iPhone 16 Pro';assert.throws(()=>createOrder(s),/收货/);s.address={name:'演示用户',phone:'13800138000',detail:'上海市示例路 1 号'};let o=createOrder(s);assert.equal(o.total,77);s.design.style='mono';assert.equal(o.design.style,'original');assert.equal(o.delivery,'mail');});
+test('pickup stages stop after collection, mail stages stop after delivered',()=>{let s=initialState();s.model='iPhone 16 Pro';s.delivery='pickup';let o=createOrder(s);assert.equal(o.total,69);for(let i=0;i<8;i++)advanceOrder(o);assert.equal(o.step,3);s.delivery='mail';s.address={name:'示例',phone:'13800138000',detail:'上海市演示地址 001'};o=createOrder(s);for(let i=0;i<8;i++)advanceOrder(o);assert.equal(o.step,4);});

@@ -1,0 +1,16 @@
+import {designFor} from './catalog.js';
+import {validateDesignSources} from './creator-core.js';
+export const models=['iPhone 16 Pro','iPhone 16','iPhone 15','iPhone 15 Pro','Samsung S24','小米 14'];
+export const devices=[
+ {id:'SH-001',name:'静安嘉里中心',location:'上海 · 南京西路 1515 号 · L1 中庭',hours:'10:00 – 22:00',distance:'0.8 km',online:true,queue:1,stock:{'iPhone 16 Pro':12,'iPhone 16':8,'iPhone 15':0,'iPhone 15 Pro':4}},
+ {id:'SH-002',name:'新天地广场',location:'上海 · 淮海中路 333 号 · L2',hours:'10:00 – 22:00',distance:'2.6 km',online:true,queue:0,stock:{'iPhone 16 Pro':5,'iPhone 16':3,'iPhone 15':9,'iPhone 15 Pro':6,'Samsung S24':5,'小米 14':7}},
+ {id:'SH-003',name:'徐家汇美罗城',location:'上海 · 肇嘉浜路 1111 号 · B1',hours:'10:00 – 22:00',distance:'5.2 km',online:false,queue:0,stock:{'iPhone 16 Pro':8,'iPhone 15':2}}
+];
+export const styles=[{id:'original',name:'原图',desc:'保留你的灵感',filter:'none'},{id:'vivid',name:'鲜活胶片',desc:'让色彩更有温度',filter:'saturate(1.6) contrast(1.1)'},{id:'dream',name:'梦境柔光',desc:'轻盈的粉紫氛围',filter:'hue-rotate(28deg) saturate(.8) brightness(1.12)'},{id:'mono',name:'黑白故事',desc:'经典的光影层次',filter:'grayscale(1) contrast(1.15)'}];
+export function initialState(){return {account:null,accounts:{},model:'',deviceId:'SH-001',delivery:'mail',cart:[],checkoutMode:'case',design:designFor('bloom'),address:{name:'',phone:'',detail:'',country:'',city:'',postal:''},orders:[],activeOrder:null};}
+export function login(s,email,model){const key=email.trim().toLowerCase();const saved=s.accounts[key];s.account={email:key,defaultModel:saved?.defaultModel||model||''};s.model=s.account.defaultModel;s.accounts[key]={...s.account};}
+export function saveModel(s,model){if(!models.includes(model))throw Error('请选择支持的手机型号');s.model=model;if(s.account){s.account.defaultModel=model;s.accounts[s.account.email]={...s.account};}}
+export function scanDevice(s,id){s.deviceId=id;s.delivery='pickup';if(s.account?.defaultModel)s.model=s.account.defaultModel;}
+export function availability(id,model){const d=devices.find(x=>x.id===id);if(!d)return {ok:false,code:'unknown',message:'未找到该设备，请检查设备 ID'};if(!model)return {ok:false,code:'model',message:'请先选择你的手机型号'};if(!d.online)return {ok:false,code:'offline',message:'设备暂时离线'};if(!(model in d.stock))return {ok:false,code:'unsupported',message:'该设备暂不支持此机型'};if(d.stock[model]<1)return {ok:false,code:'stock',message:'该机型库存不足'};return {ok:true,code:'ready',message:`支持此机型 · 库存 ${d.stock[model]} 件`};}
+export function createOrder(s){validateDesignSources(s,s.design);if(!models.includes(s.model))throw Error('请先选择手机型号');if(s.delivery==='pickup'){const a=availability(s.deviceId,s.model);if(!a.ok)throw Error(a.message);}else{if(!s.address.name.trim()||!/^1\d{10}$/.test(s.address.phone)||s.address.detail.trim().length<6)throw Error('请完整填写收货信息及 11 位手机号码');}const o={id:'DEMO-'+Date.now().toString(36).toUpperCase()+'-'+Math.random().toString(36).slice(2,5).toUpperCase(),model:s.model,deviceId:s.deviceId,delivery:s.delivery,design:structuredClone(s.design),address:structuredClone(s.address),total:s.delivery==='mail'?77:69,step:0,createdAt:new Date().toISOString(),pickupCode:String(Math.floor(100000+Math.random()*900000))};s.orders.unshift(o);s.activeOrder=o.id;return o;}
+export function advanceOrder(o){o.step=Math.min(o.step+1,o.fulfillment==='china-local'?5:o.delivery==='pickup'?3:4);}

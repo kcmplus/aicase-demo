@@ -1,0 +1,11 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {baseDesign,templates,designFor,matchingTemplates} from '../storefront/catalog.js';
+import {addLayer,updateLayer,layerAction,createHistory,MAX_LAYERS} from '../storefront/editor-model.js';
+import {initialState,createOrder} from '../storefront/core.js';
+test('28 distinct presets and bilingual filtering',()=>{assert.equal(templates.length,28);assert.equal(new Set(templates.map(t=>t.id)).size,28);assert.equal(matchingTemplates('all','Cherry')[0].id,'cherry');assert.equal(matchingTemplates('all','樱桃')[0].id,'cherry');assert.deepEqual(matchingTemplates('favorites','',['cats']).map(t=>t.id),['cats']);});
+test('template layers are independent snapshots',()=>{const a=designFor('cats'),b=designFor('cats');a.layers[0].x=90;assert.equal(b.layers[0].x,70);assert.equal(b.layers.length,4);});
+test('layer operations clamp bounds and keep stable identity',()=>{const d=baseDesign();const id=addLayer(d,'sticker','cat');updateLayer(d,id,{x:-100,y:999,size:200,rotation:900});assert.deepEqual([d.layers[0].x,d.layers[0].y,d.layers[0].size,d.layers[0].rotation],[5,95,90,180]);const copy=layerAction(d,id,'duplicate');assert.notEqual(id,copy);layerAction(d,copy,'back');assert.equal(d.layers[0].id,copy);layerAction(d,id,'delete');assert.equal(d.layers.length,1);});
+test('layer cap and invalid assets',()=>{const d=baseDesign();assert.equal(addLayer(d,'sticker','invalid'),null);for(let i=0;i<MAX_LAYERS;i++)addLayer(d,'text','hello');assert.equal(addLayer(d,'text','extra'),null);assert.equal(d.layers.length,MAX_LAYERS);});
+test('undo redo restores full editable design and branches correctly',()=>{const h=createHistory(),d=baseDesign();h.push(d);addLayer(d,'text','one');const prior=h.undo(d);assert.equal(prior.layers.length,0);const restored=h.redo(prior);assert.equal(restored.layers[0].text,'one');h.undo(restored);h.push(prior);assert.equal(h.canRedo,false);});
+test('checkout snapshot includes layers without later mutations',()=>{const s=initialState();s.model='iPhone 16';s.design=designFor('cats');s.address={name:'Demo',phone:'13800138000',detail:'Shanghai demo address'};const order=createOrder(s);s.design.layers[0].x=1;assert.equal(order.design.layers[0].x,70);assert.equal(order.total,77);});

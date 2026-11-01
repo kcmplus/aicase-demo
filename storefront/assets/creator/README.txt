@@ -1,0 +1,1 @@
+12 POPOMO geometric vector stickers created for this prototype, 2026-10-21. They extend the existing flat vector visual style. Separate from the OpenMoji licensed collection. Generated photos, when present, are AI-created demonstration assets, not customer uploads or physical product proofs.

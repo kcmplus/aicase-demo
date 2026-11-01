@@ -1,0 +1,23 @@
+.language-control{display:flex;align-items:center;flex-shrink:0;margin:0}
+.language-control select{min-height:39px;width:123px;background:#fff;border:1px solid #ead9e1;border-radius:24px;padding:8px 10px;font-size:11px;color:#714358;cursor:pointer}
+.header-actions{gap:17px}
+html[lang="en-US"] .hero h1{font-size:clamp(45px,4.7vw,70px);line-height:1.15;letter-spacing:-3px}
+html[lang="en-US"] .hero-description{font-size:14px}
+html[lang="en-US"] .hero-cta{gap:20px}
+html[lang="en-US"] .hero-benefits{gap:17px}
+html[lang="en-US"] .hero-benefits span{font-size:9px}
+html[lang="en-US"] .page-heading h1{font-size:35px;line-height:1.25;letter-spacing:-1.2px}
+html[lang="en-US"] .flow-steps>span{font-size:10px}
+html[lang="en-US"] .editor-bottom strong{font-size:24px}
+html[lang="en-US"] .total-line>strong{font-size:24px}
+html[lang="en-US"] .device-card-body .between{align-items:start}
+html[lang="en-US"] .device-card strong{font-size:13px}
+html[lang="en-US"] .device-card .status{flex-shrink:0}
+html[lang="en-US"] .device-actions{flex-direction:column}
+html[lang="en-US"] .summary-note{font-size:10px}
+html[lang="en-US"] .order-progress>div{max-width:22%;text-align:center;font-size:10px}
+html[lang="en-US"] .style-picker button{font-size:9px}
+html[lang="en-US"] .demo-detail{font-size:9px}
+@media(max-width:1100px){.desktop-nav{gap:18px}.header-actions{gap:12px}.language-control select{width:117px}html[lang="en-US"] .hero-cta{flex-wrap:wrap;gap:15px}html[lang="en-US"] .hero-benefits{flex-wrap:wrap;row-gap:10px}}
+@media(max-width:760px){.site-header{gap:9px}.header-actions{gap:8px}.language-control select{width:112px;font-size:10px;min-height:36px;padding:8px}.header-actions .account-button span{display:none}.account-button{padding:9px}.site-header .brand-wordmark{width:118px;height:23px}.logo .logo-sub{letter-spacing:2px;font-size:5.5px}html[lang="en-US"] .demo-bar{font-size:7px;letter-spacing:0;gap:4px}html[lang="en-US"] .demo-detail{font-size:7px}html[lang="en-US"] .hero h1{font-size:49px;letter-spacing:-2.6px}html[lang="en-US"] .hero-description{font-size:12px}html[lang="en-US"] .hero-benefits span{font-size:8px}html[lang="en-US"] .hero-benefits{gap:9px}html[lang="en-US"] .hero-station{font-size:10px}html[lang="en-US"] .section-heading{flex-wrap:wrap}html[lang="en-US"] .section-heading h2{font-size:22px}html[lang="en-US"] .section-heading>.text-link{font-size:10px}html[lang="en-US"] .story-option{gap:13px}html[lang="en-US"] .story-option h3{font-size:14px}html[lang="en-US"] .page-heading h1{font-size:29px;letter-spacing:-.8px}html[lang="en-US"] .flow-steps>span{font-size:8px;gap:4px}html[lang="en-US"] .flow-steps>i{margin:0 5px;width:18px}html[lang="en-US"] .editor-bottom{gap:12px}html[lang="en-US"] .editor-bottom strong{font-size:22px}html[lang="en-US"] .editor-bottom .btn{font-size:11px;padding:13px}html[lang="en-US"] .editor-bottom small{font-size:8px}html[lang="en-US"] .preview-tools{font-size:8px}html[lang="en-US"] .delivery-choice{padding:20px 12px}html[lang="en-US"] .delivery-choice h2{font-size:16px}html[lang="en-US"] .delivery-choice p{font-size:10px}html[lang="en-US"] .device-card strong{font-size:12px}html[lang="en-US"] .device-card{gap:10px}html[lang="en-US"] .device-card .between{gap:6px}html[lang="en-US"] .device-info>h2{font-size:26px}html[lang="en-US"] .device-facts{grid-template-columns:1.3fr 1fr 1fr}html[lang="en-US"] .device-facts strong{font-size:10px}html[lang="en-US"] .model-note{font-size:9px;flex-wrap:wrap}html[lang="en-US"] .history-row small{margin-left:0}html[lang="en-US"] .pickup-ticket{padding:20px 15px}html[lang="en-US"] .pickup-ticket p{font-size:10px}html[lang="en-US"] .order-progress>div{font-size:8px}html[lang="en-US"] .total-line>strong{font-size:24px}html[lang="en-US"] .simulation-panel .btn{font-size:11px}html[lang="en-US"] .fine-print{font-size:10px}}
+@media(max-width:370px){.language-control select{width:106px}.header-actions{gap:6px}.site-header .brand-wordmark{width:110px;height:22px}html[lang="en-US"] .hero h1{font-size:45px}html[lang="en-US"] .hero-cta{gap:13px}html[lang="en-US"] .flow-steps>i{width:10px;margin:0 4px}html[lang="en-US"] .flow-steps>span{font-size:7px}}

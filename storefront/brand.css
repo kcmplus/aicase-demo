@@ -1,0 +1,77 @@
+/* POPOMO brand application. White and ivory remain the main surfaces. */
+:root{--pink:#e44592;--teal:#30b7b9;--cream:#fef4e8;--ink:#352a32;--paper:#fffaf5;--white:#fff;--line:#eadfe3;--muted:#80747b;--lime:var(--pink);--green:#147c7b}
+body{background:var(--paper)}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline-color:#17868a}
+input:focus,select:focus{outline-color:#30b7b9}
+input[type=checkbox],input[type=range]{accent-color:#bc246d}
+.btn.primary{background:var(--pink);color:#321024}
+.btn.primary:hover{background:#ed6ca9}
+.btn.secondary{border-color:#ded0d7;background:#fffdfb}
+.btn.secondary:hover{background:#fff0f6;border-color:#dc8fb2}
+.text-link{border-color:#c6b7bf}.text-button{color:#a82464}
+.green{color:#177572}.amber{color:#956326}
+.demo-bar{background:#fff;border-bottom:1px solid #f0e6eb;color:#7c646f}
+.demo-dot{background:var(--pink)}.bar-right{color:#9c3670}
+.site-header{background:#fffdf9}.logo{display:flex;flex-direction:column;gap:5px;align-items:center}
+.brand-badge{display:inline-flex;background:#30b7b9;border-radius:7px;padding:3px 5px;overflow:hidden;line-height:0;vertical-align:middle}
+.brand-wordmark{width:156px;height:30px;display:block}
+.logo .logo-sub{font-size:7px;letter-spacing:2.6px;color:#9d3a6b;margin:0;font-weight:700}
+.desktop-nav a.active{color:#a82464}.desktop-nav a.active:after{background:var(--pink)}
+.account-button{border-color:#ead9e1;background:#fff}.order-link b{color:#321024}
+.eyebrow{color:#947480}.eyebrow>span{background:var(--teal)}
+.hero-description{color:#877880}.scribble{color:#c72e77}.scribble svg{stroke:var(--teal)}
+.hero-benefits{color:#82727b}.hero-benefits svg{color:#159395}
+.hero-art{background:#fff1f5;border:1px solid #f5e1e8;border-radius:47% 47% 18px 18px}
+.hero-art:before{content:'';position:absolute;left:8%;right:8%;top:22%;bottom:7%;border-radius:50%;background:#edf9f7}
+.art-orbit{border-color:#d4e9e6;z-index:1}.hero-star{color:var(--pink);z-index:2}
+.hero-art .art-label{color:#b94f80;z-index:3;top:32px}.art-caption{color:#9f627d}
+.floating-tag{background:#fffdf9;border:1px solid #f0dbe4;color:#b13c75}.floating-tag svg{color:var(--teal)}
+.ticker{background:#fff;color:var(--teal);border-top:1px solid #f1dce6;border-bottom:1px solid #f1dce6}.ticker span{color:#b43e75}
+.round-arrow{color:#a1356a}.card-number,.inspiration-title>span{color:#8b717e}
+.story-option{background:#fff}.story-option>svg:first-child{color:#159395}.story-option p,.delivery-story p{color:#8a7882}
+.site-footer{background:var(--cream);border-top:1px solid #eddfd3;color:#8a747f}
+.footer-brand{display:flex;align-items:start;flex-direction:column;gap:10px}.footer-brand>span:not(.brand-badge){color:#b04078;font-size:11px;letter-spacing:3px;margin:0}
+.footer-star{color:var(--teal)}
+.flow-steps>span{color:#a08c97}.flow-steps>i{background:#eadde4}.flow-steps b{border-color:#e2d5dc}
+.flow-steps .current b{color:#321024}.flow-steps .done b{background:#e0f6f3;color:#167d7b}
+.lime-dot{color:var(--pink)}.saved-indicator{color:#2c8380}.page-heading p{color:#887780}
+.preview-panel{background-color:#f4fbfa;background-image:radial-gradient(#c8e0dd 1px,transparent 1px)}
+.preview-ground{background:#fff5f7}.preview-tools{background:#edf7f5;color:#688581}
+.preview-tools button{color:#447b78}.pill{border-color:#eadce3;background:#fff9fb}
+.field-label{color:#7b6572}.model-note{color:#697f7c}.editor-heading>span:first-child{color:#c86a96}
+.upload-zone{border-color:#bddfdb;background:#fff}.upload-zone>svg{color:#19999b}.upload-zone>span{color:#879592}
+.mini-label{color:#8d7481}.art-picker button.selected{border-color:var(--pink)}
+.art-picker button>b{color:#321024}.style-picker .selected{border-color:#da71a0;background:#fff1f7}
+.enhance-button{background:#fff2f8;border-color:#f1d2e1;color:#9f2c65}.enhance-button small{color:#9c7890}
+.enhance-button.selected{background:#fce2ef;border-color:#d47ba4}
+.fine-print{color:#8f8289}.editor-bottom small,.editor-bottom strong span{color:#907d87}
+.delivery-choice{background:#fff}.delivery-choice.selected{background:#fff3f8;border-color:#d76a9b}
+.delivery-choice>svg{color:var(--pink)}.delivery-choice>div{border-color:#eadde3}
+.delivery-choice p,.delivery-choice>div>span{color:#907988}.radio-mark{border-color:#d1bdc7}
+.selected .radio-mark,.payment-choice .radio-mark{border-color:#c4367b;background:#fff}
+.device-card{background:#fff}.device-card.selected{background:#fff5f9;border-color:#d980a8}
+.device-mini{background:#edf9f7;color:#239a9a}.device-card p{color:#8c7e86}.status{color:#16807d}
+.help-text,.subheading>a,.subheading>span{color:#8a7783}.summary-product p,.price-lines>div>span{color:#8a7783}
+.summary-note,.total-line>span small{color:#907b87}.big-outline{color:var(--teal)}
+.mail-explainer p{color:#8d7886}.mini-process{color:#208b89}
+.form-card label{color:#7f6776}.payment-choice{border-color:#d578a2;background:#fff3f8}
+.payment-icon{background:#f8d7e7;color:#ab2a67}.payment-choice p{color:#96798a}
+.inline-status.success{background:#eaf7f3;color:#237770}.inline-status.warning{background:#fff2e1;color:#986b32}
+.form-error{color:#a53257}.order-status{background:#eaf7f3;border-color:#bcded5}
+.order-progress .reached{color:#a82c65}.order-progress .reached b{color:#321024;border-color:#eaaaC7}
+.order-progress b{background:#fff7fa;border-color:#eadce2}.order-progress:before{background:#eadde3}
+.pickup-ticket{background:#fff3f8;border-color:#e3b4cb}.pickup-ticket h2{color:#b52f6b}.pickup-ticket p{color:#95788a}.ticket-icon{color:var(--teal)}
+.shipping-status{background:#eff9f6;color:#2e918b}.shipping-status h2{color:#365f5b}.timeline b{background:var(--teal)}.timeline>div{border-color:#d2e7e2}
+.simulation-panel{border-color:#dac4d0;background:#fffdfb}.simulation-panel p{color:#907c88}.completion-check{color:#237a72}
+.location-line{color:#7c8985}.history-row.active{color:#ae326b}
+.device-showcase{background:#fff3f7}.showcase-caption{color:#a75b7e}.showcase-floor{background:#e2f0ed}
+.machine{background:linear-gradient(100deg,#f0e2d5,#fffcf7 30%,#fef4e8);border-color:#ddc9d3;box-shadow:16px 19px 2px #d9b3c5,-1px 6px 4px #bcaab2}
+.machine-top{padding:21px 17px 17px;display:flex;flex-direction:column;align-items:center;gap:8px}
+.machine-top .brand-wordmark{width:157px;height:30px}.machine-top>span:not(.brand-badge){font-size:7px;letter-spacing:2px;color:#bb3c79;margin:0}
+.machine-screen{background:#30b7b9;border-color:#db85ab;color:#fffaf2}.machine-screen-button{background:#fef4e8;color:#ac316d}
+.machine-bottom>span,.machine-bottom>small{color:#ac537c}.machine-bottom>div{background:#296f70;border-color:#df9dbc;box-shadow:inset 0 7px 5px #244e50}
+.machine-note{color:#a17d91}.location-text,.device-facts small{color:#8b7b84}.scan-demo p{color:#98818e}
+.mobile-nav{background:#fffcf9f5;border-color:#ecdce4}.mobile-nav a{color:#9c8292}.mobile-nav a[aria-current=page]{color:#b7276b}
+.mobile-nav a[aria-current=page] svg{background:#fce2ef;outline-color:#fce2ef}
+#toast{background:#503645;color:#fff8f0}dialog{border-color:#ead5e0;background:#fffbf7}dialog p{color:#8e7986}dialog .account-saved{background:#fff0f7;color:#9c3868}
+@media(max-width:760px){.brand-wordmark{width:127px;height:25px}.logo .logo-sub{font-size:6px;letter-spacing:2px}.brand-badge{padding:2px 4px;border-radius:6px}.hero-art{border-radius:45% 45% 12px 12px}.hero-art .art-label{top:23px}.editor-bottom{background:#fffaf5f5}.machine{box-shadow:12px 15px 2px #d9b3c5,-1px 6px 4px #bcaab2}.machine-top{padding:15px 12px 11px;gap:6px}.machine-top .brand-wordmark{width:119px;height:23px}.machine-top>span:not(.brand-badge){font-size:5px;letter-spacing:1.5px}.footer-brand .brand-wordmark{width:146px;height:28px}}

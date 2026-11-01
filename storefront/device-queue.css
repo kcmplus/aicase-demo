@@ -1,0 +1,66 @@
+/* A persistent public queue and QR panel surround the current customer's step. */
+#device-app.queue-layout{padding-top:clamp(14px,2.5vw,34px)}
+.queue-layout .device-header{min-height:clamp(44px,5dvh,82px)}
+.queue-layout .device-station{padding-block:clamp(10px,1.5dvh,20px)}
+.device-queue-board{flex-shrink:0;border:1px solid #dfe7da;background:#f2f5ed;border-radius:clamp(16px,2vw,26px);padding:clamp(12px,1.8vw,24px)}
+.device-queue-heading{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:clamp(9px,1.5dvh,18px)}
+.device-queue-heading h2{font-size:clamp(10px,1.4vw,16px);font-weight:500;letter-spacing:1.5px;margin:0;color:#6e8366}
+.device-queue-heading>span{font-size:clamp(11px,1.6vw,19px);color:#708269}
+.device-queue-strip{list-style:none;padding:0;margin:0;display:flex;gap:clamp(8px,1.5vw,16px)}
+.device-queue-strip li{flex:1;min-width:0;border:1px solid #e1e7db;border-radius:12px;background:#ffffffae;position:relative;padding:clamp(10px,1.5vw,20px);display:flex;flex-direction:column;gap:5px}
+.device-queue-strip strong{font-weight:500;font-size:clamp(18px,3vw,36px);letter-spacing:.04em;font-variant-numeric:tabular-nums}
+.device-queue-strip li>span{font-size:clamp(9px,1.3vw,16px);line-height:1.3;color:#8b9881}
+.device-queue-strip .current-ticket{background:#284e3e;color:#fff;border-color:#284e3e}.device-queue-strip .current-ticket>span{color:#ccd9bd}
+.device-queue-strip .queue-more{flex:.7;background:transparent;border-style:dashed;justify-content:center}.queue-more>span{font-size:9px!important}
+.queue-print-indicator{position:absolute;right:9px;top:12px;width:6px;height:6px;border-radius:50%;background:#97c48e;box-shadow:0 0 0 4px #9abd8b17}
+.device-queue-empty{font-size:clamp(12px,1.8vw,21px);color:#98a28f;padding:8px 0}
+.device-queue-connection{color:#9b7652;font-size:clamp(11px,1.5vw,18px);margin-top:8px}
+.device-workspace{flex:1;min-height:0;padding:clamp(12px,2dvh,30px) 0;display:flex;position:relative}
+.device-workspace>.device-screen{width:100%;height:100%;min-height:0}
+.queue-welcome{justify-content:center}.device-call-copy{text-align:center}.device-call-copy h1{font-size:clamp(24px,4.8vw,50px);font-weight:500;letter-spacing:-1px;line-height:1.1;margin:clamp(8px,1.5dvh,20px) 0}
+.device-call-copy>p:not(.device-eyebrow){font-size:clamp(12px,1.8vw,22px);line-height:1.5;color:#869279;max-width:600px;margin-inline:auto;text-wrap:balance}
+.device-call-copy .device-eyebrow{margin-bottom:8px;font-size:clamp(9px,1.3vw,16px)}
+.device-call-number{display:block;font-size:clamp(44px,10vw,115px);font-weight:500;letter-spacing:-.04em;line-height:1;color:#2f5941;font-variant-numeric:tabular-nums}
+.device-idle-spark{display:block;color:#e2a2bc;font-size:clamp(48px,9vw,110px);line-height:1;margin-bottom:16px}
+.queue-welcome .device-action-dock{margin-top:0;padding-top:clamp(14px,2dvh,32px)}
+.device-call-countdown{text-align:center;margin:0;font-size:clamp(9px,1.3vw,15px);color:#98a38e;font-variant-numeric:tabular-nums}
+.device-join{height:clamp(215px,24dvh,430px);flex-shrink:0;display:grid;grid-template-columns:auto minmax(0,1fr);align-items:center;gap:clamp(16px,3vw,42px);padding:clamp(14px,2.5vw,30px);background:#eef2e6;border:1px solid #dce5d3;border-radius:clamp(18px,2vw,30px)}
+.device-join-code{width:clamp(130px,28vw,330px);max-width:32dvh;aspect-ratio:1;background:#fff;border-radius:12px;padding:clamp(4px,.8vw,10px)}
+.device-join-code svg{width:100%;height:auto;display:block;shape-rendering:crispEdges}.device-join-code>p{font-size:13px;color:#7b8875;line-height:1.5;padding:15px}
+.device-join-kicker{display:flex;gap:6px;align-items:center;font-size:clamp(8px,1.2vw,14px);letter-spacing:1.6px;color:#91a17d}
+.device-join-copy h2{font-size:clamp(18px,3.3vw,37px);font-weight:500;letter-spacing:-.5px;line-height:1.15;margin:9px 0;color:#3f6240;text-wrap:balance}
+.device-join-copy>p{font-size:clamp(10px,1.6vw,18px);color:#8c9b7f;line-height:1.5;text-wrap:balance}
+.device-join-copy>a,.device-join-copy>button{font-size:clamp(10px,1.4vw,17px);color:#547849;min-height:30px;display:flex;gap:5px;align-items:center;margin-top:8px;background:none;border:0;padding:0;text-align:left;text-decoration:underline;text-underline-offset:3px}
+.device-join-copy>small{font-size:clamp(8px,1vw,12px);line-height:1.3;display:block;color:#a0ab96}
+.queue-layout .device-footer{min-height:44px;padding-block:6px;font-size:clamp(9px,1.2vw,14px)}
+.queue-layout .device-preview-badge{font-size:clamp(8px,1.1vw,13px);max-width:66%}.queue-layout .device-help{min-height:36px}
+.queue-layout .device-button{min-height:clamp(48px,5.5dvh,80px);padding:clamp(12px,1.8vw,22px) clamp(16px,2vw,28px);font-size:clamp(15px,2.3vw,25px);border-radius:12px}
+.queue-layout .device-action-dock{padding-top:clamp(10px,1.5dvh,24px)}
+.queue-layout .device-text-button{min-height:30px;padding:6px;margin-top:5px;font-size:clamp(11px,1.5vw,18px)}
+.queue-layout .device-heading{padding-top:0}.queue-layout .device-heading h1{font-size:clamp(23px,4.2vw,47px);letter-spacing:-.8px}.queue-layout .device-eyebrow{font-size:clamp(9px,1.2vw,15px);margin-bottom:9px}
+.queue-layout .device-heading>p:not(.device-eyebrow){font-size:clamp(11px,1.6vw,21px);margin-top:9px;line-height:1.45}
+.device-confirm-summary{flex:1;min-height:0;display:flex;align-items:center;justify-content:center;gap:clamp(24px,5vw,70px);padding-block:clamp(10px,1.7dvh,24px)}
+.device-confirm-summary .device-order-case{width:clamp(70px,10dvh,210px);max-width:28%;transform:rotate(-3deg)}
+.device-confirm-summary>div:last-child{max-width:50%}.device-confirm-summary span{display:block;font-size:clamp(10px,1.5vw,18px);color:#91a083;margin-bottom:8px}
+.device-confirm-summary strong{display:block;font-weight:500;font-size:clamp(19px,3.2vw,38px);margin-bottom:12px}.device-confirm-summary p{font-size:clamp(11px,1.6vw,20px);color:#5c8052;margin-bottom:5px}.device-confirm-summary small{font-size:clamp(9px,1.2vw,15px);color:#99a28f}
+.queue-layout .device-confirm-check{padding:10px 12px;min-height:40px;font-size:clamp(11px,1.6vw,19px);margin-bottom:8px;border-radius:10px;gap:10px}
+.queue-layout .device-confirm-check input{width:22px;height:22px;min-height:22px}
+.queue-layout .device-print-scene{min-height:70px;margin:8px 0;flex:1}.queue-layout .printing-case{width:clamp(55px,8dvh,170px)}
+.queue-layout .print-model{font-size:clamp(10px,1.4vw,17px)}.queue-layout .device-progress-panel{padding:clamp(12px,2vw,25px);margin:8px 0 0;border-radius:14px}.queue-layout .device-progress-heading{margin-bottom:10px}
+.queue-layout .device-progress-heading h2{font-size:clamp(13px,2vw,24px)}.queue-layout .device-progress-heading>span{font-size:clamp(13px,2vw,24px)}.queue-layout .device-print-steps{margin-top:12px;font-size:clamp(9px,1.3vw,16px)}.queue-layout .device-print-steps i{width:20px;height:20px}
+.queue-layout .device-success-mark{width:36px;height:36px;margin-bottom:8px}.queue-layout .device-success-mark svg{width:23px}.queue-layout .device-pickup-scene{min-height:70px;margin:8px 0}
+.queue-layout .pickup-case{width:clamp(60px,9dvh,185px)}.queue-layout .pickup-slot{bottom:5%;left:25%;right:25%}.queue-layout .pickup-arrow{right:25%;font-size:35px}.queue-layout .device-ready-model{font-size:clamp(11px,1.7vw,21px)}
+.queue-layout .device-thanks-art{height:clamp(65px,10dvh,210px)}.queue-layout .device-thanks-art>svg{width:65px}.queue-layout .device-thanks-art>span,.queue-layout .device-thanks-art>i{font-size:28px}
+.queue-layout .completed-screen .device-action-dock{margin-top:14px}.queue-layout .device-return-note{margin-top:8px;font-size:11px}
+.queue-layout .device-error-symbol{width:45px;height:45px;margin-bottom:12px}.queue-layout .device-error-symbol svg{width:26px}.queue-layout .error-screen .device-action-dock{margin-top:10px}
+.queue-layout .device-entry-fields{padding-top:10px}.queue-layout .code-screen .device-heading h1{font-size:clamp(21px,3vw,38px)}.queue-layout .code-screen #device-code{min-height:42px;font-size:clamp(14px,2.5vw,28px);padding:10px}
+.queue-layout .code-screen .device-keypad{gap:6px;margin-top:8px}.queue-layout .code-screen .device-keypad button{min-height:clamp(32px,3.8dvh,70px);font-size:clamp(14px,2.4vw,26px);border-radius:7px}
+.queue-layout .code-screen .device-action-dock{padding-top:10px}
+/* Nonmodal assistance stays above the QR, so new visitors can still scan it. */
+.device-page #device-dialog{position:fixed;top:12dvh;bottom:auto;max-height:47dvh;width:min(90vw,720px);padding:clamp(20px,3vw,40px);z-index:10;box-shadow:0 15px 70px #193c2b50}
+.device-page #device-dialog h2{font-size:clamp(22px,3vw,35px);margin:10px 0}.device-page #device-dialog>p{font-size:clamp(12px,1.8vw,21px);margin:10px 0}.device-page #device-dialog .device-button{min-height:48px;font-size:16px;padding:12px}.device-page .device-idle-counter{font-size:32px;margin:8px}
+@media(max-width:420px){.device-join{padding:12px;gap:12px}.device-join-code{width:128px}.device-join-copy h2{font-size:18px}.device-join-copy>button{margin-top:4px}.queue-layout .device-workspace{padding-block:12px}.device-queue-board{padding:10px}.device-queue-strip li{padding:9px}.device-queue-strip .queue-more{flex:.55}.device-queue-strip strong{font-size:17px}.device-queue-strip li>span{font-size:8px}.device-confirm-summary{gap:23px}.device-confirm-summary .device-order-case{width:72px}.queue-layout .device-call-copy h1{font-size:24px}}
+@media(orientation:landscape) and (min-width:900px){#device-app.queue-layout{display:grid;grid-template-columns:minmax(0,1fr) minmax(300px,.65fr);grid-template-rows:auto auto auto 1fr auto;column-gap:35px}.queue-layout .device-header,.queue-layout .device-station,.queue-layout .device-footer{grid-column:1/-1}.device-queue-board{grid-column:1;grid-row:3}.device-workspace{grid-column:1;grid-row:4}.device-join{height:auto;grid-column:2;grid-row:3/5;display:flex;flex-direction:column;justify-content:center;text-align:center}.device-join-code{width:min(25vw,35dvh);max-width:none}.device-join-copy>a,.device-join-copy>button,.device-join-kicker{justify-content:center}.queue-layout .code-screen{display:flex;gap:0}.queue-layout .device-workspace{padding-block:10px}.queue-layout .device-confirm-summary .device-order-case{width:65px}.queue-layout .device-queue-strip li{padding:8px}.queue-layout .device-call-number{font-size:45px}.queue-layout .device-call-copy h1{font-size:22px}}
+.device-code-input-row{display:flex;gap:6px;align-items:stretch}.device-code-input-row #device-code{flex:1;width:0}
+.device-code-input-row button{flex-shrink:0;min-width:42px;border:1px solid #dce5d3;border-radius:9px;background:#edf2e6;font-size:clamp(10px,1.4vw,17px);color:#527548;padding:4px 8px}
+.queue-layout .code-screen .device-eyebrow{display:none}

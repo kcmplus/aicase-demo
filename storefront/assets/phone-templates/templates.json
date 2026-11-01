@@ -1,0 +1,34 @@
+[
+  {
+    "id": "iphone-17-a-v1",
+    "model": "iPhone 17",
+    "code": "iphone-17-a",
+    "overlay": "/assets/phone-templates/iphone-17-a.png",
+    "mask": "/assets/phone-templates/iphone-17-a-mask.png",
+    "sourceWidth": 592,
+    "sourceHeight": 1207,
+    "sourceDpi": 200,
+    "printWidth": 888,
+    "printHeight": 1811,
+    "dpi": 300,
+    "calibrated": false,
+    "sizeEvidence": "vendor-print-sample",
+    "previewOverlay": "/assets/phone-templates/iphone-17-a-preview.png"
+  },
+  {
+    "id": "iphone-16e-v1",
+    "model": "iPhone 16e",
+    "code": "iphone-16e",
+    "overlay": "/assets/phone-templates/iphone-16e.png",
+    "mask": "/assets/phone-templates/iphone-16e-mask.png",
+    "sourceWidth": 593,
+    "sourceHeight": 1185,
+    "sourceDpi": 200,
+    "printWidth": 890,
+    "printHeight": 1778,
+    "dpi": 300,
+    "calibrated": false,
+    "sizeEvidence": "template-density-derived",
+    "previewOverlay": "/assets/phone-templates/iphone-16e-preview.png"
+  }
+]
